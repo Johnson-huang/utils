@@ -4,6 +4,7 @@
   "description": "常用的工具方法库",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "test": "jest --no-cache",
     "doc": "typedoc --options typedoc.json",
     "build": "rollup --config"
@@ -25,7 +26,10 @@
     "@babel/preset-typescript": "^7.17.12",
     "@types/jest": "^27.5.1",
     "@types/node": "^17.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "babel-jest": "^28.1.0",
+    "eslint": "^8.16.0",
     "jest": "^28.1.0",
     "rollup": "^2.75.0",
     "rollup-plugin-typescript": "^1.0.1",

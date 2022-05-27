@@ -6,5 +6,6 @@
 - [ ] register 和 function 形式
 - [ ] npm publish
 - [x] jest 单元测试
-- [ ] tslint
+- [ ] eslint
 - [x] babel
+- [ ] 自动化 eslint - jest - doc - build
