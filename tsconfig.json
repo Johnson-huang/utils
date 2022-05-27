@@ -20,5 +20,6 @@
     "types": ["node"],
     "paths": {}
   },
-  "include": ["src", "typescript"]
+  "include": ["src", "typescript"],
+  "exclude": ["docs"]
 }
