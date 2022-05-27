@@ -18,7 +18,11 @@ export function money(num: number, decimals = 2): string {
             floatNum = list[1].substr(0, decimals)
         }
     } else { // 没有小数部分
-        floatNum = decimals ? '0'.padEnd(decimals, '0') : ''
+        if (decimals) {
+            floatNum = decimals ? '0'.padEnd(decimals, '0') : ''
+        } else {
+            floatNum = decimals ? '0'.padEnd(decimals, '0') : ''
+        }
     }
     return `${intNum}${floatNum ? '.' + floatNum : ''}`
 }
