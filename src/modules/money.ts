@@ -5,7 +5,7 @@
  * @param decimals {number} 希望保留的小数位数
  * @example money(100000.2345) => '100,000.23'
  */
-export function money(num: number, decimals = 2): string {
+export default function money(num: number, decimals = 2): string {
     const numStr = num + ''
     const list = numStr.split('.')
     const intNum = list[0].replace(/\B(?=(?:\d{3})+$)/g, ',')

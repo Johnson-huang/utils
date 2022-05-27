@@ -1,7 +1,7 @@
 import typescript from "rollup-plugin-typescript";
 
 export default {
-    input: "src/money.ts",
+    input: "src/index.ts",
     output: [
         {
             file: "lib/bundle.cjs.js",
