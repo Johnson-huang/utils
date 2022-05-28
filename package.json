@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
-    "test": "jest --no-cache",
+    "test": "jest --no-cache --coverage",
     "doc": "typedoc --options typedoc.ts",
     "build": "rollup --config"
   },

@@ -3,11 +3,13 @@
 
 - [x] rollup
   - [ ] 去掉注释
-- [x] typedoc 注释生成 README 文档
+  - [ ] 代码压缩
+- [x] typedoc
+  - [ ] 注释生成 README 文档
+  - [ ] API 分功能（校验、转换、计算）
 - [ ] register 和 function 形式
 - [ ] npm publish
 - [x] jest 单元测试
-- [ ] eslint
-  - [ ] 建议使用 eslint --init 进行初始化
+- [x] eslint
 - [x] babel
 - [ ] 自动化 eslint - jest - doc - build

@@ -1,1 +1,2 @@
-export { default as money } from './modules/money'
+import './register'
+export { default as money } from './modules/money';

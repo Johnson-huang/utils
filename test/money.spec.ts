@@ -1,6 +1,6 @@
 import money from '../src/modules/money'
 
-describe('money.ts', () => {
+describe('测试 money.ts', () => {
     describe('整数部分', () => {
         it('4位数', () => {
             expect(money(1000, 0)).toBe('1,000')
@@ -18,6 +18,10 @@ describe('money.ts', () => {
     describe('小数部分', () => {
         it('无小数，小数位数补零', () => {
             expect(money(10000)).toBe('10,000.00')
+        })
+
+        it('无小数，小数位数不补零', () => {
+            expect(money(10000, 0)).toBe('10,000')
         })
 
         it('有小数，小数位数长度截取', () => {
