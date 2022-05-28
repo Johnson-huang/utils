@@ -10,6 +10,11 @@ export default {
         {
             file: 'lib/bundle.esm.js',
             format: 'esm'
+        },
+        {
+            file: 'lib/bundle.umd.js',
+            name: 'utils',
+            format: 'umd'
         }
     ],
     plugins: [
