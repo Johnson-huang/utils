@@ -15,7 +15,9 @@ export default function money(num: number, decimals = 2): string {
         if (list[1].length < decimals) {
             floatNum = list[1].padEnd(decimals, '0')
         } else {
-            floatNum = list[1].substr(0, decimals)
+            // String.prototype.substr 不在 ECMA 标准内
+            // 不建议使用
+            floatNum = list[1].slice(0, decimals)
         }
     } else { // 没有小数部分
         if (decimals) {

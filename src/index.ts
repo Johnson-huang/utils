@@ -1,1 +1,1 @@
-export { default as money } from './modules/money';
+export { default as money } from './modules/money'

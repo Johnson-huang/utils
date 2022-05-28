@@ -4,7 +4,7 @@
   "description": "常用的工具方法库",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint . --ext .ts --fix",
     "test": "jest --no-cache",
     "doc": "typedoc --options typedoc.json",
     "build": "rollup --config"

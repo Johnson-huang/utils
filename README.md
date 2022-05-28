@@ -7,5 +7,6 @@
 - [ ] npm publish
 - [x] jest 单元测试
 - [ ] eslint
+  - [ ] 建议使用 eslint --init 进行初始化
 - [x] babel
 - [ ] 自动化 eslint - jest - doc - build
