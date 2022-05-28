@@ -1,19 +1,25 @@
 module.exports = {
-    root: true,
-    parserOptions: {
-        // ecmaVersion: 7,
-        parser: 'babel-eslint',
-        sourceType: 'module'
-    },
-    env: {
-        browser: true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        commonjs: true,
         node: true,
         es6: true,
+        jest: true,
     },
-    extends: ['eslint:recommended'],
-
-    // add your custom rules here
-    rules: {
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
         // "parser": "babel-eslint",
         'accessor-pairs': 2,
         'arrow-spacing': [2, {
