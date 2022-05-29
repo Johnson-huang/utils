@@ -2,6 +2,10 @@ import floatToPercent from "../src/modules/floatToPercent";
 import {keep_decimals_type} from "../src/interface";
 
 describe('测试 floatToPercent.ts', () => {
+    it('不传默认参数', () => {
+        expect(floatToPercent(1.123456)).toBe('112.35%')
+    })
+
     it('不保留小数', () => {
         expect(floatToPercent(1.123456, 0)).toBe('112%')
     })

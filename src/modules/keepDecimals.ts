@@ -13,12 +13,9 @@ import {keep_decimals_type} from "../interface";
  * keepDecimals(0.12, 3, 'slice') => '0.120'
  */
 export default function keepDecimals(num: number, decimals = 2, type = keep_decimals_type.TO_FIXED): string {
-    switch (type) {
-        case keep_decimals_type.TO_FIXED:
-            return num.toFixed(decimals)
-        case keep_decimals_type.SLICE:
-            return (divide(Math.floor(multiply(num, Math.pow(10, decimals))), Math.pow(10, decimals)) + '').padEnd(decimals, '0')
-        default:
-            return num.toFixed(decimals)
+    if (type === keep_decimals_type.SLICE) {
+        return (divide(Math.floor(multiply(num, Math.pow(10, decimals))), Math.pow(10, decimals)) + '').padEnd(decimals, '0')
+    } else {
+        return num.toFixed(decimals)
     }
 }
