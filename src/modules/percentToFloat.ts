@@ -1,4 +1,8 @@
-// 百分数转小数
-export default function percentToFloat(percent: string) {
+/**
+ * 百分数转小数
+ * @param percent
+ * @example percentToFloat('110.25%') => 1.1025
+ */
+export default function percentToFloat(percent: string): number {
     return +(percent.replace('%', '')) / 100
 }
