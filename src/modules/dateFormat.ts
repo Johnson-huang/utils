@@ -12,9 +12,9 @@
  * @param param {number|string}
  * @param fmt {string}
  * @returns {string}
- * @example dateFormat(1653763181201) =>
+ * @example dateFormat(1653794777031) => '2022-05-29 11:26:17'
  */
-export function dateFormat (param: number|string, fmt = 'yyyy-MM-dd HH:mm:ss'): string {
+export default function dateFormat (param: number|string, fmt = 'yyyy-MM-dd HH:mm:ss'): string {
     let date
     switch (typeof param) {
         case 'string':
