@@ -1,10 +1,6 @@
 import multiply from "./multiply";
 import divide from "./divide";
-
-enum keepType {
-    TO_FIXED = 'toFixed',
-    SLICE = 'slice',
-}
+import {keep_decimals_type} from "../interface";
 
 /**
  * 保留数字小数位数
@@ -12,15 +8,17 @@ enum keepType {
  * @param decimals 保留的小数位数
  * @param type 保留方式 toFixed：四舍五入 slice：截取
  * @example
- * keepDecimals(0.12567) => 0.13
- * keepDecimals(0.12345, 3, 'slice') => 0.123
+ * keepDecimals(0.12567) => '0.13'
+ * keepDecimals(0.12345, 3, 'slice') => '0.123'
+ * keepDecimals(0.12, 3, 'slice') => '0.120'
  */
-export default function keepDecimals(num: number, decimals = 2, type = keepType.TO_FIXED): number {switch (type) {
-        case keepType.TO_FIXED:
-            return +num.toFixed(decimals)
-        case keepType.SLICE:
-            return divide(Math.floor(multiply(num, Math.pow(10, decimals))), Math.pow(10, decimals))
+export default function keepDecimals(num: number, decimals = 2, type = keep_decimals_type.TO_FIXED): string {
+    switch (type) {
+        case keep_decimals_type.TO_FIXED:
+            return num.toFixed(decimals)
+        case keep_decimals_type.SLICE:
+            return (divide(Math.floor(multiply(num, Math.pow(10, decimals))), Math.pow(10, decimals)) + '').padEnd(decimals, '0')
         default:
-            return +num.toFixed(decimals)
+            return num.toFixed(decimals)
     }
 }

@@ -1,4 +1,5 @@
 import money from '../src/modules/money'
+import {keep_decimals_type} from "../src/interface";
 
 describe('测试 money.ts', () => {
     describe('整数部分', () => {
@@ -34,6 +35,14 @@ describe('测试 money.ts', () => {
 
         it('有小数，第二个参数为 0', () => {
             expect(money(10000.2345, 0)).toBe('10,000')
+        })
+
+        it('有小数，四舍五入', () => {
+            expect(money(10000.2356, 2)).toBe('10,000.24')
+        })
+
+        it('有小数，截取', () => {
+            expect(money(10000.2345, 2, keep_decimals_type.SLICE)).toBe('10,000.23')
         })
     })
 })
