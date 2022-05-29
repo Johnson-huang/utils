@@ -13,4 +13,8 @@ describe('测试 keepDecimals.ts', () => {
     it('补零', () => {
         expect(keepDecimals(0.1, 3)).toBe('0.100')
     })
+
+    it('保留小数位数方式不在枚举内', () => {
+        expect(keepDecimals(0.1, 3, 123)).toBe('0.100')
+    })
 })

@@ -10,7 +10,6 @@ import keepDecimals from "./keepDecimals";
  * @return {string}
  * @example floatToPercent(0.1234) => '12.34%'
  */
-export default function floatToPercent(num: number, decimals = 2, type: keep_decimals_type.TO_FIXED): string {
-    const str = +keepDecimals(num, decimals + 2, type)
-    return multiply(num, 100).toFixed(decimals) + '%'
+export default function floatToPercent(num: number, decimals = 2, type = keep_decimals_type.TO_FIXED): string {
+    return keepDecimals(multiply(num, 100), decimals, type) + '%'
 }
