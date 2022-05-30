@@ -1,4 +1,6 @@
-export default function isExcel(file) {
+import {File} from "../interface";
+
+export default function isExcel(file: File) {
     const excelType = [
         'application/vnd.ms-excel', // xls csv
         'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' // xlsx
