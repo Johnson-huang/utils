@@ -4,21 +4,27 @@ import cleanupPlugin from "rollup-plugin-cleanup"; // 去掉注释等无效代�
 import filesize from 'rollup-plugin-filesize' // 显示打包后文件大小
 import resolve from '@rollup/plugin-node-resolve' // 能够识别node_modules的第三方模块
 import commonjs from '@rollup/plugin-commonjs' // 将 CommonJS 的模块转换为 ES2015 供 rollup 处理
+import babel from '@rollup/plugin-babel'
+import json from '@rollup/plugin-json'
+
+// @ts-ignore
+import pkg from './package.json'
+console.log(pkg)
 
 export default {
     input: 'src/index.ts',
     output: [
         {
-            file: 'lib/bundle.cjs.js',
+            file: `lib/${pkg.name}.cjs.js`,
             format: 'cjs'
         },
         {
-            file: 'lib/bundle.esm.js',
+            file: `lib/${pkg.name}.esm.js`,
             format: 'esm'
         },
         {
-            file: 'lib/bundle.umd.js',
-            name: 'utils',
+            file: `lib/${pkg.name}.umd.js`,
+            name: pkg.name,
             format: 'umd'
         }
     ],
@@ -27,8 +33,10 @@ export default {
             exclude: 'node_modules/**',
             typescript: require('typescript')
         }),
+        json(),
         resolve(),
         commonjs(),
+        babel({ babelHelpers: 'bundled', exclude: ['node_modules/**'] }),
         filesize(),
         terser(),
         cleanupPlugin()
