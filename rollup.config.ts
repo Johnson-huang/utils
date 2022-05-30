@@ -9,7 +9,6 @@ import json from '@rollup/plugin-json'
 
 // @ts-ignore
 import pkg from './package.json'
-console.log(pkg)
 
 export default {
     input: 'src/index.ts',
