@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@Johnson-huang/utils",
   "version": "1.0.0",
   "description": "常用的工具方法库",
   "main": "dist/utils.cjs.js",
@@ -10,6 +10,12 @@
     "doc": "typedoc --options typedoc.ts",
     "build": "rm -rf dist && rollup --config"
   },
+  "files": [
+    "src",
+    "dist/*.js",
+    "types/*.d.ts",
+    "docs"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Johnson-huang/utils.git"

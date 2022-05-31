@@ -10,22 +10,22 @@ import babel from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
 
 // @ts-ignore
-import pkg from './package.json'
+// import pkg from './package.json'
 
 export default {
     input: 'src/index.ts',
     output: [
         {
-            file: `dist/${pkg.name}.cjs.js`,
+            file: 'dist/utils.cjs.js',
             format: 'cjs'
         },
         {
-            file: `dist/${pkg.name}.esm.js`,
+            file: 'dist/utils.esm.js',
             format: 'esm'
         },
         {
-            file: `dist/${pkg.name}.umd.js`,
-            name: pkg.name,
+            file: 'dist/utils.umd.js',
+            name: 'utils',
             format: 'umd'
         }
     ],
