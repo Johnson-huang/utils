@@ -4,11 +4,11 @@
 - [x] rollup
   - [x] 去掉注释
   - [x] 代码压缩
+  - [x] gzip
 - [x] typedoc
   - [ ] 注释生成 README 文档
   - [ ] API 分功能（校验、转换、计算）
-- [ ] npm publish
 - [x] jest 单元测试
 - [x] eslint
 - [x] babel
-- [ ] 自动化 eslint - jest - doc - build
+- [ ] 自动化 eslint - jest - doc - build - npm publish

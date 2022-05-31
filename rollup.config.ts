@@ -4,6 +4,8 @@ import cleanupPlugin from "rollup-plugin-cleanup"; // 去掉注释等无效代�
 import filesize from 'rollup-plugin-filesize' // 显示打包后文件大小
 import resolve from '@rollup/plugin-node-resolve' // 能够识别node_modules的第三方模块
 import commonjs from '@rollup/plugin-commonjs' // 将 CommonJS 的模块转换为 ES2015 供 rollup 处理
+// @ts-ignore
+import gzipPlugin from 'rollup-plugin-gzip'
 import babel from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
 
@@ -38,6 +40,7 @@ export default {
         babel({ babelHelpers: 'bundled', exclude: ['node_modules/**'] }),
         filesize(),
         terser(),
-        cleanupPlugin()
+        cleanupPlugin(),
+        gzipPlugin()
     ]
 }

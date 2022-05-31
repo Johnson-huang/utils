@@ -2,7 +2,8 @@
   "name": "utils",
   "version": "1.0.0",
   "description": "常用的工具方法库",
-  "main": "index.js",
+  "main": "dist/utils.cjs.js",
+  "module": "dist/utils.esm.js",
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
     "test": "jest --no-cache --coverage",
@@ -39,6 +40,7 @@
     "rollup": "^2.75.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-gzip": "^3.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "ts-jest": "^28.0.3",
