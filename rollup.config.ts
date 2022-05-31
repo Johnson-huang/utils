@@ -14,15 +14,15 @@ export default {
     input: 'src/index.ts',
     output: [
         {
-            file: `lib/${pkg.name}.cjs.js`,
+            file: `dist/${pkg.name}.cjs.js`,
             format: 'cjs'
         },
         {
-            file: `lib/${pkg.name}.esm.js`,
+            file: `dist/${pkg.name}.esm.js`,
             format: 'esm'
         },
         {
-            file: `lib/${pkg.name}.umd.js`,
+            file: `dist/${pkg.name}.umd.js`,
             name: pkg.name,
             format: 'umd'
         }

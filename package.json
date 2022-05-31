@@ -7,7 +7,7 @@
     "lint": "eslint . --ext .ts --fix",
     "test": "jest --no-cache --coverage",
     "doc": "typedoc --options typedoc.ts",
-    "build": "rm -rf lib && rollup --config"
+    "build": "rm -rf dist && rollup --config"
   },
   "repository": {
     "type": "git",
