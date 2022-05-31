@@ -25,8 +25,12 @@ export default function keepDecimals(num: number, decimals = 2, type = keep_deci
         afterDealNum = divide(+list[0], Math.pow(10, decimals))
     } else {
         // 按照 decimals 四舍五入后的数字
-        if (list[1] && +list[1][(list[1] as string).length - 1] >= 5) {
-            afterDealNum = divide((+list[0] >= 0 ? +list[0] + 1 : +list[0] - 1), Math.pow(10, decimals))
+        if (decimals) {
+            if (list[1] && +list[1][(list[1] as string).length - 1] >= 5) {
+                afterDealNum = divide((+list[0] >= 0 ? +list[0] + 1 : +list[0] - 1), Math.pow(10, decimals))
+            } else {
+                afterDealNum = divide(+list[0], Math.pow(10, decimals))
+            }
         } else {
             afterDealNum = divide(+list[0], Math.pow(10, decimals))
         }
@@ -41,6 +45,8 @@ export default function keepDecimals(num: number, decimals = 2, type = keep_deci
         } else {
             decimalsStr = afterList[1].padEnd(decimals, '0')
         }
+    } else if (decimals) {
+        decimalsStr = ''.padEnd(decimals, '0')
     }
     return `${afterList[0]}${decimalsStr ? '.' + decimalsStr : decimalsStr}`
 }
