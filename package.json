@@ -1,5 +1,5 @@
 {
-  "name": "@Johnson-huang/utils",
+  "name": "johnson-huang-utils",
   "version": "1.0.0",
   "description": "常用的工具方法库",
   "main": "dist/utils.cjs.js",
