@@ -26,7 +26,7 @@ export default function keepDecimals(num: number, decimals = 2, type = keep_deci
     } else {
         // 按照 decimals 四舍五入后的数字
         if (decimals) {
-            if (list[1] && +list[1][(list[1] as string).length - 1] >= 5) {
+            if (list[1] && +list[1][0] >= 5) {
                 afterDealNum = divide((+list[0] >= 0 ? +list[0] + 1 : +list[0] - 1), Math.pow(10, decimals))
             } else {
                 afterDealNum = divide(+list[0], Math.pow(10, decimals))
