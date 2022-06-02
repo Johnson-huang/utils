@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts --fix",
     "test": "jest --no-cache --coverage",
-    "doc": "typedoc --options typedoc.ts",
+    "docs": "typedoc --options typedoc.ts",
     "build": "rm -rf dist && rollup --config"
   },
   "files": [

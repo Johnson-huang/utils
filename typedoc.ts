@@ -1,4 +1,5 @@
 module.exports = {
-  "entryPoints": ["src/index.ts"],
-  "out": "docs"
+  entryPoints: ["src/index.ts"],
+  out: "docs",
+  readme: 'none'
 }
