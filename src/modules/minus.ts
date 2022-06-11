@@ -1,7 +1,8 @@
-import add from "./add";
+import add from './add'
 
 /**
- * 数字减法（解决浮点数精度问题）
+ * @category 计算
+ * @description 数字减法（解决浮点数精度问题）
  * @param a {number}
  * @param b {number}
  * @example minus(0.2, 0.1) => 0.1

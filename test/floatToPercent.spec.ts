@@ -1,5 +1,5 @@
-import floatToPercent from "../src/modules/floatToPercent";
-import {keep_decimals_type} from "../src/interface";
+import floatToPercent from '../src/modules/floatToPercent'
+import { keep_decimals_type } from '../src/interface'
 
 describe('测试 floatToPercent.ts', () => {
     it('不传默认参数', () => {

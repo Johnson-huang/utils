@@ -1,9 +1,9 @@
-import keepDecimals from "./keepDecimals";
-import {keep_decimals_type} from '../interface'
+import keepDecimals from './keepDecimals'
+import { keep_decimals_type } from '../interface'
 
 /**
- * 将数字格式化为金额类型
- * @returns {string}
+ * @category 转化
+ * @description 将数字格式化为金额类型
  * @param num 待处理的数字
  * @param decimals 希望保留的小数位数
  * @param type 保留小数位数的方式

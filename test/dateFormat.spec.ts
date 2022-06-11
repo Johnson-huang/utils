@@ -1,4 +1,4 @@
-import dateFormat from "../src/modules/dateFormat";
+import dateFormat from '../src/modules/dateFormat'
 
 describe('测试 dateFormat.ts', () => {
     it('参数为字符串', () => {

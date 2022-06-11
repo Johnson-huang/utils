@@ -1,5 +1,6 @@
 /**
- * 百分数转小数
+ * @category 转化
+ * @description 百分数转小数
  * @param percent
  * @example percentToFloat('110.25%') => 1.1025
  */

@@ -28,8 +28,9 @@ https://johnson-huang.github.io/utils/
   - [x] 代码压缩
   - [x] gzip
 - [x] typedoc
-  - [ ] API 分功能（校验、转换、计算）
+  - [x] API 分功能（校验、转换、计算）
+  - [ ] 把枚举写入文档
 - [x] jest 单元测试
 - [x] eslint
 - [x] babel
-- [ ] 自动化 eslint - jest - doc - build - npm publish
+- [x] 自动化 eslint - jest - doc - build - npm publish

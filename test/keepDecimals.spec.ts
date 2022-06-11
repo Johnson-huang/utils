@@ -1,7 +1,15 @@
-import keepDecimals from "../src/modules/keepDecimals";
-import {keep_decimals_type} from "../src/interface";
+import keepDecimals from '../src/modules/keepDecimals'
+import { keep_decimals_type } from '../src/interface'
 
 describe('测试 keepDecimals.ts', () => {
+    it('处理数字0', () => {
+        expect(keepDecimals(0)).toBe('0.00')
+    })
+
+    it('处理数字0，不保留小数位数', () => {
+        expect(keepDecimals(0, 0)).toBe('0')
+    })
+
     it('不传默认参数', () => {
         expect(keepDecimals(0.125)).toBe('0.13')
     })

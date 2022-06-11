@@ -1,5 +1,5 @@
 import money from '../src/modules/money'
-import {keep_decimals_type} from "../src/interface";
+import { keep_decimals_type } from '../src/interface'
 
 describe('测试 money.ts', () => {
     describe('整数部分', () => {

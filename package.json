@@ -8,7 +8,11 @@
     "lint": "eslint . --ext .ts --fix",
     "test": "jest --no-cache --coverage",
     "docs": "typedoc --options typedoc.ts",
-    "build": "rm -rf dist && rollup --config"
+    "check": "npm run lint && npm run test && npm run docs",
+    "build": "rm -rf dist && rollup --config",
+    "build:patch": "npm run check && npm version patch && npm run build",
+    "build:minor": "npm run check && npm version minor && npm run build",
+    "build:major": "npm run check && npm version major && npm run build"
   },
   "files": [
     "src",
@@ -52,7 +56,7 @@
     "ts-jest": "^28.0.3",
     "ts-node": "^10.8.0",
     "tslib": "^2.4.0",
-    "typedoc": "^0.22.15",
+    "typedoc": "^0.22.17",
     "typescript": "^4.6.4"
   }
 }

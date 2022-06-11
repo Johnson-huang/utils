@@ -1,8 +1,13 @@
+interface Obj {
+    [key: string]: string | string[]
+}
+
 /**
- * url 参数字符串转JSON
- * 同名参数，使用列表存储
+ * @category 转化
+ * @description url 参数字符串转JSON，同名参数，使用列表存储
  * @param url
  * @example
+ * ```
  * urlParamsToJSON('text%3D%E4%BD%A0%E5%A5%BD%26num%3D123%26link%3Dhttps%3A%2F%2Fwww.baidu.com%26link%3Dhttps%3A%2F%2Fgoogle.cn')
  * =>
  * {
@@ -10,6 +15,7 @@
  *  num: '123',
  *  link: ['https://www.baidu.com', 'https://google.cn']
  * }
+ * ```
  */
 export default function urlParamsToJSON(url: string): object {
     let paramStr
@@ -19,17 +25,17 @@ export default function urlParamsToJSON(url: string): object {
         paramStr = decodeURIComponent(url)
     }
     const paramsList = paramStr.split('&')
-    const obj: {[key: string]: any} = {}
+    const obj: Obj = {}
     paramsList.forEach(param => {
         const keyValue = param.split('=')
         if (keyValue[0] in obj) {
-            obj[keyValue[0]].push(keyValue[1])
+            (obj[keyValue[0]] as string[]).push(keyValue[1])
         } else {
             obj[keyValue[0]] = [keyValue[1]]
         }
     })
 
-    for (let key in obj) {
+    for (const key in obj) {
         if (obj[key].length === 1) {
             obj[key] = obj[key][0]
         }
