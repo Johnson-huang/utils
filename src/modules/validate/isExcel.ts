@@ -1,4 +1,4 @@
-import { File } from '../interface'
+import { File } from '../../interface'
 
 /**
  * @category 校验

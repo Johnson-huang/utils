@@ -1,4 +1,4 @@
-import floatToPercent from '../src/modules/floatToPercent'
+import floatToPercent from '../src/modules/format/floatToPercent'
 import { keep_decimals_type } from '../src/interface'
 
 describe('测试 floatToPercent.ts', () => {

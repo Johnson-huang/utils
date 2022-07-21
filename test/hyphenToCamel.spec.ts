@@ -1,4 +1,4 @@
-import hyphenToCamel from '../src/modules/hyphenToCamel'
+import hyphenToCamel from '../src/modules/format/hyphenToCamel'
 
 describe('测试 hyphenToCamel.ts', () => {
     it('单个单词', () => {

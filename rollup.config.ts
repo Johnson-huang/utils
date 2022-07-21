@@ -7,6 +7,9 @@ import commonjs from '@rollup/plugin-commonjs' // 将 CommonJS 的模块转换�
 import gzipPlugin from 'rollup-plugin-gzip'
 import babel from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
+import alias from '@rollup/plugin-alias'
+
+const path = require('path')
 
 export default {
     input: 'src/index.ts',
@@ -21,7 +24,7 @@ export default {
         },
         {
             file: 'dist/utils.umd.js',
-            name: 'utils',
+            name: 'jhUtils',
             format: 'umd'
         }
     ],
@@ -34,6 +37,11 @@ export default {
         resolve(),
         commonjs(),
         babel({ babelHelpers: 'bundled', exclude: ['node_modules/**'] }),
+        alias({
+            entries: [
+                {find: '@', replacement: path.join(__dirname, 'src')}
+            ]
+        }),
         filesize(),
         terser(),
         cleanupPlugin(),

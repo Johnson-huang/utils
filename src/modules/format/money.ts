@@ -1,5 +1,5 @@
 import keepDecimals from './keepDecimals'
-import { keep_decimals_type } from '../interface'
+import { keep_decimals_type } from '../../interface'
 
 /**
  * @category 转化

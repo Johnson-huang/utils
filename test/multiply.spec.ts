@@ -1,4 +1,4 @@
-import multiply from '../src/modules/multiply'
+import multiply from '../src/modules/calculate/multiply'
 
 describe('测试 multiply.ts', () => {
     it('被乘数为0', () => {

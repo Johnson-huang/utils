@@ -1,4 +1,4 @@
-import keepDecimals from '../src/modules/keepDecimals'
+import keepDecimals from '../src/modules/format/keepDecimals'
 import { keep_decimals_type } from '../src/interface'
 
 describe('测试 keepDecimals.ts', () => {

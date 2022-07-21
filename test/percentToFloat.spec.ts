@@ -1,4 +1,4 @@
-import percentToFloat from '../src/modules/percentToFloat'
+import percentToFloat from '../src/modules/format/percentToFloat'
 
 describe('测试 percentToFloat.ts', () => {
     it('有小数', () => {

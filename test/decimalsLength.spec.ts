@@ -1,4 +1,4 @@
-import decimalsLength from '../src/modules/decimalsLength'
+import decimalsLength from '../src/modules/calculate/decimalsLength'
 
 describe('测试 decimalsLength.ts', () => {
     it('整数', () => {

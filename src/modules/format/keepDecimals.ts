@@ -1,6 +1,6 @@
-import multiply from './multiply'
-import divide from './divide'
-import { keep_decimals_type } from '../interface'
+import multiply from '../calculate/multiply'
+import divide from '../calculate/divide'
+import { keep_decimals_type } from '../../interface'
 
 /**
  * @category 转化

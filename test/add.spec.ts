@@ -1,4 +1,4 @@
-import add from '../src/modules/add'
+import add from '../src/modules/calculate/add'
 
 describe('测试 add.ts', () => {
     it('整数相加', () => {

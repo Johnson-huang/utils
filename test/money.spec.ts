@@ -1,4 +1,4 @@
-import money from '../src/modules/money'
+import money from '../src/modules/format/money'
 import { keep_decimals_type } from '../src/interface'
 
 describe('测试 money.ts', () => {

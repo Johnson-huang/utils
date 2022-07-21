@@ -1,4 +1,4 @@
-import minus from '../src/modules/minus'
+import minus from '../src/modules/calculate/minus'
 
 describe('测试 minus.ts', () => {
     it('整数相减', () => {

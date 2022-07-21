@@ -1,4 +1,4 @@
-import divide from '../src/modules/divide'
+import divide from '../src/modules/calculate/divide'
 
 describe('测试 divide.ts', () => {
     it('被除数为0', () => {

@@ -1,4 +1,4 @@
-import urlParamsToJSON from '../src/modules/urlParamsToJSON'
+import urlParamsToJSON from '../src/modules/format/urlParamsToJSON'
 
 describe('测试 urlParamsToJSON.ts', () => {
     it('带?字符串', () => {
