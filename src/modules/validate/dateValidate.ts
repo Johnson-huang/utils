@@ -50,14 +50,8 @@ interface dateValidateReturn {
  * ```
  */
 export default function dateValidate(param: string, fmt = 'yyyy-MM-dd HH:mm:ss'): dateValidateReturn {
-    // 校验 param 字符串是否可为日期
-    if (new Date(param)) {
-
-    }
-    // new Date(param)
-
     // 校验 fmt 是否合法
-    const fmts = {
+    const fmts: any = {
         'yyyy': true, // 年
         'yyyy-MM': true, // 年月
         'yyyy-MM-dd': true, // 年月日
@@ -75,13 +69,24 @@ export default function dateValidate(param: string, fmt = 'yyyy-MM-dd HH:mm:ss')
     }
 
     // 把 fmt 中的 yyyy HH dd 等替换为 param 中对应的数字
+    let yearValidate = 0
+    let monthValidate = 0
+    let dayValidate = 0
+    let hourValidate = 0
+    let minuteValidate = 0
+    let secondValidate = 0
+
+    // const params = param.split(' ')
+    // const params2 = params[0].split('-')
+    // const year = params2[]
+
     return {
-        isValidate: true,
-        yearValidate: 0,
-        monthValidate: 0,
-        dayValidate: 0,
-        hourValidate: 0,
-        minuteValidate: 0,
-        secondValidate: 0,
+        isValidate: !!(yearValidate || monthValidate || dayValidate || hourValidate || minuteValidate || secondValidate),
+        yearValidate,
+        monthValidate,
+        dayValidate,
+        hourValidate,
+        minuteValidate,
+        secondValidate,
     }
 }

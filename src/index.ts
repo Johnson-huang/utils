@@ -4,6 +4,7 @@ export { default as decimalsLength } from './modules/calculate/decimalsLength'
 export { default as divide } from './modules/calculate/divide'
 export { default as minus } from './modules/calculate/minus'
 export { default as multiply } from './modules/calculate/multiply'
+export { default as getType } from './modules/calculate/getType'
 
 // format
 export { default as dateFormat } from './modules/format/dateFormat'
