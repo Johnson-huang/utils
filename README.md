@@ -9,13 +9,23 @@ npm i johnson-huang-utils -S
 # 使用
 ## 全部引入
 ```javascript
+// cjs
 import * as utils from 'johnson-huang-utils'
+utils.add(1, 2)
+
+// esm
+import utils from 'johnson-huang-utils/utils.esm.js'
 utils.add(1, 2)
 ```
 
 ## 按需引入
 ```javascript
+// cjs
 import { add } from 'johnson-huang-utils'
+add(1, 2)
+
+// esm
+import { add } from 'johnson-huang-utils/utils.esm.js'
 add(1, 2)
 ```
 
