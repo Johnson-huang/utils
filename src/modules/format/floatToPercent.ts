@@ -1,4 +1,4 @@
-import multiply from '@/modules/calculate/multiply'
+import multiply from '../calculate/multiply'
 import { keep_decimals_type } from '@/interface'
 import keepDecimals from './keepDecimals'
 

@@ -1,6 +1,6 @@
 // calculate
 export { default as add } from './modules/calculate/add'
-export { default as decimalsLength } from './modules/calculate/decimalsLength'
+export { default as getDecimalsLength } from './modules/calculate/getDecimalsLength'
 export { default as divide } from './modules/calculate/divide'
 export { default as minus } from './modules/calculate/minus'
 export { default as multiply } from './modules/calculate/multiply'
@@ -28,4 +28,3 @@ export { default as isNegativeFloat } from './modules/validate/isNegativeFloat'
 export { default as isFloat } from './modules/validate/isFloat'
 export { default as isIDCard } from './modules/validate/isIDCard'
 export { default as isChinese } from './modules/validate/isChinese'
-// export { default as dateValidate } from './modules/validate/dateValidate'

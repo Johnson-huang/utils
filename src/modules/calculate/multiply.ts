@@ -1,4 +1,4 @@
-import decimalsLength from './decimalsLength'
+import getDecimalsLength from './getDecimalsLength'
 
 /**
  * @category 计算
@@ -11,7 +11,7 @@ export default function multiply(a: number, b: number): number {
     if (a === 0 || b === 0) {
         return 0
     }
-    const maxFloatLength = Math.max(decimalsLength(a), decimalsLength(b))
+    const maxFloatLength = Math.max(getDecimalsLength(a), getDecimalsLength(b))
     const ret = Math.pow(10, maxFloatLength)
     return (ret * a) * (b * ret) / ret / ret
 }

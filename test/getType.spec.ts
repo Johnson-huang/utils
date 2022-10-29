@@ -1,4 +1,4 @@
-import {getType} from "@/modules/calculate/getType";
+import getType from '../src/modules/calculate/getType'
 
 describe('测试 getType', () => {
     it('null', () => {
@@ -32,7 +32,8 @@ describe('测试 getType', () => {
         expect(getType([])).toBe('array')
     })
     it('function', () => {
-        expect(getType(() => {})).toBe('function')
+        const mockCallback = jest.fn()
+        expect(getType(mockCallback)).toBe('function')
         expect(getType(class Foo {})).toBe('function')
     })
     it('map', () => {

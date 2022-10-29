@@ -9,7 +9,8 @@ import babel from '@rollup/plugin-babel'
 import json from '@rollup/plugin-json'
 import alias from '@rollup/plugin-alias'
 
-const path = require('path')
+// const path = require('path')
+import path from 'path'
 
 export default {
     input: 'src/index.ts',
@@ -39,7 +40,7 @@ export default {
         babel({ babelHelpers: 'bundled', exclude: ['node_modules/**'] }),
         alias({
             entries: [
-                {find: '@', replacement: path.join(__dirname, 'src')}
+                { find: '@', replacement: path.join(__dirname, 'src') }
             ]
         }),
         filesize(),
